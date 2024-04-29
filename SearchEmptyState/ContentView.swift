@@ -48,7 +48,7 @@ struct ContentView: View {
             } catch {
                 wizards = staticWizards
             }
-        }
+        }.colorScheme(.light)
     }
     
     struct Wizards: Codable {
