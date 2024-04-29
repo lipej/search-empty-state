@@ -12,8 +12,7 @@
 		3457BCFB2BDFDC530082C060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3457BCFA2BDFDC530082C060 /* Assets.xcassets */; };
 		3457BCFE2BDFDC530082C060 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3457BCFD2BDFDC530082C060 /* Preview Assets.xcassets */; };
 		3457BD082BDFDC540082C060 /* SearchEmptyStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457BD072BDFDC540082C060 /* SearchEmptyStateTests.swift */; };
-		3457BD122BDFDC540082C060 /* SearchEmptyStateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457BD112BDFDC540082C060 /* SearchEmptyStateUITests.swift */; };
-		3457BD142BDFDC540082C060 /* SearchEmptyStateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3457BD132BDFDC540082C060 /* SearchEmptyStateUITestsLaunchTests.swift */; };
+		34B5305A2BE0143700C5D766 /* SearchEmptyStateUITestsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B530592BE0143700C5D766 /* SearchEmptyStateUITestsSearchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,7 @@
 		3457BD032BDFDC540082C060 /* SearchEmptyStateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchEmptyStateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3457BD072BDFDC540082C060 /* SearchEmptyStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyStateTests.swift; sourceTree = "<group>"; };
 		3457BD0D2BDFDC540082C060 /* SearchEmptyStateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchEmptyStateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3457BD112BDFDC540082C060 /* SearchEmptyStateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyStateUITests.swift; sourceTree = "<group>"; };
-		3457BD132BDFDC540082C060 /* SearchEmptyStateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyStateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34B530592BE0143700C5D766 /* SearchEmptyStateUITestsSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEmptyStateUITestsSearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +119,7 @@
 		3457BD102BDFDC540082C060 /* SearchEmptyStateUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3457BD112BDFDC540082C060 /* SearchEmptyStateUITests.swift */,
-				3457BD132BDFDC540082C060 /* SearchEmptyStateUITestsLaunchTests.swift */,
+				34B530592BE0143700C5D766 /* SearchEmptyStateUITestsSearchTests.swift */,
 			);
 			path = SearchEmptyStateUITests;
 			sourceTree = "<group>";
@@ -202,6 +199,7 @@
 					};
 					3457BD0C2BDFDC540082C060 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = 3457BCF22BDFDC520082C060;
 					};
 				};
@@ -274,8 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3457BD142BDFDC540082C060 /* SearchEmptyStateUITestsLaunchTests.swift in Sources */,
-				3457BD122BDFDC540082C060 /* SearchEmptyStateUITests.swift in Sources */,
+				34B5305A2BE0143700C5D766 /* SearchEmptyStateUITestsSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -527,6 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.lipejose.SearchEmptyStateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SearchEmptyState;
@@ -537,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

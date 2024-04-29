@@ -24,7 +24,7 @@ struct ContentView: View {
                 List(filteredWizards, id: \.self) {
                     wizard in Text(wizard)
                 }
-                .searchable(text: $searchTerm)
+                .searchable(text: $searchTerm, prompt: "Search a Wizard")
                 .overlay {
                     if filteredWizards.isEmpty {
                         ContentUnavailableView(label: {
@@ -33,7 +33,7 @@ struct ContentView: View {
                                 Text("No Wizards").bold()
                             }
                         }, description: {
-                                Text("No wizards was found with: \(searchTerm), maybe you're looking for a muggle?")
+                            Text("No wizards was found with: \(searchTerm), maybe you're looking for a muggle?").accessibilityIdentifier("ResultError")
                         }
                         )
                     }
