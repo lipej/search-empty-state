@@ -19,7 +19,7 @@ final class SearchEmptyStateUITestsSearchTests: XCTestCase {
 
     func testErrorMessage() throws {
         let searchTerm = "Petunia Dursley"
-        let expectedResultErrorMessage = "No wizards was found with: \(searchTerm), maybe you're looking for a muggle?"
+        let expectedResultErrorMessage = "No wizards were found with the name \(searchTerm). Perhaps you're looking for a muggle?"
         let search = app.searchFields["Search a Wizard"]
         
         search.tap()
