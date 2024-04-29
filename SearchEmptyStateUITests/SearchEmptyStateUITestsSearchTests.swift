@@ -8,11 +8,6 @@
 import XCTest
 
 final class SearchEmptyStateUITestsSearchTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        false
-    }
-    
     var app: XCUIApplication!
 
     override func setUpWithError() throws {
@@ -22,9 +17,8 @@ final class SearchEmptyStateUITestsSearchTests: XCTestCase {
       app.swipeDown()
     }
 
-
     func testErrorMessage() throws {
-        let searchTerm = "Testing"
+        let searchTerm = "Petunia Dursley"
         let expectedResultErrorMessage = "No wizards was found with: \(searchTerm), maybe you're looking for a muggle?"
         let search = app.searchFields["Search a Wizard"]
         
