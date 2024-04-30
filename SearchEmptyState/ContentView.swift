@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var wizards: [String] = []
     @State private var searchTerm = ""
+    @State private var searchIsActive = true
     private var staticWizards = ["Alvo Dumbledore", "Harry Potter", "Hermione Granger", "Severus Snape", "Minerva McGonagall"]
     var filteredWizards: [String] {
         guard !searchTerm.isEmpty else {return wizards}
@@ -18,12 +19,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
                 if !wizards.isEmpty {
                     List(filteredWizards, id: \.self) {
                         wizard in Text(wizard)
                     }
-                    .searchable(text: $searchTerm, prompt: "Search a Wizard")
+                    .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search a Wizard")
                     .overlay {
                         if filteredWizards.isEmpty {
                             ContentUnavailableView(label: {
@@ -37,14 +37,16 @@ struct ContentView: View {
                             )
                         }
                     }
+                    .navigationBarTitleDisplayMode(.large)
+                    .navigationBarTitle("Hogwarts Wizards", displayMode: .large)
                 } else {
                     ProgressView() {
                         Text("Loading...")
                     }
                 }
             }
-            .navigationTitle("Hogwarts Wizards")
-        }.task {
+            
+        .task {
             do {
                 wizards = try await fetchWizards()
             } catch {
