@@ -38,7 +38,9 @@ struct ContentView: View {
                         }
                     }
                 } else {
-                    Text("loading...")
+                    ProgressView() {
+                        Text("Loading...")
+                    }
                 }
             }
             .navigationTitle("Hogwarts Wizards")
